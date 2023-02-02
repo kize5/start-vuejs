@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Discover from "@/views/Discover.vue";
+import citiesList from "@/views/CitiesList.vue";
+import City from "@/components/City.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +24,12 @@ const router = createRouter({
       path: '/discover',
       name: 'discover',
       component: Discover
+    },
+    {
+      path: '/villes', name: 'villes', component: citiesList
+    },
+    {
+      path: '/ville', name: 'ville', component: City
     }
   ]
 })
