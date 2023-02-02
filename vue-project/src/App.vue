@@ -48,8 +48,10 @@ import { RouterLink, RouterView } from 'vue-router'
   <main>
     <div class="container">
       <RouterView />
+      <div id="btn-div">
       <button id="btn" @click="alertMe">Clic me please !</button>
-    </div>
+      </div>
+      </div>
   </main>
 
 
@@ -68,6 +70,7 @@ export default {
 
 <style scoped>
 
+
 .nav-link {
   margin: 20px;
 }
@@ -76,6 +79,7 @@ export default {
   height: 75px;
   width: 75px;
 }
+
 @keyframes cube {
   from {
     transform: scale(0) rotate(0deg) translate(-50%, -50%);

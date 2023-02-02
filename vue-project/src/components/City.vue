@@ -5,6 +5,7 @@
   <p> {{ temperature }}</p>
   <p> {{ updatedAt }}</p>
   </div>
+
 </template>
 
 <script>
@@ -13,7 +14,7 @@ export default {
     name: String, // nom de la ville
     weather: String, // descriptif météo
     temperature: Number + String, // température en °C
-    updatedAt: ""// date de dernière mise à jour
+    updatedAt: String// date de dernière mise à jour
   },
   data() {
     return {
