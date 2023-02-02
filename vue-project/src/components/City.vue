@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-  <h1> {{ name }} </h1>
+  <h2> {{ name }} </h2>
   <p> {{ weather }}</p>
   <p> {{ temperature }}</p>
   <p> {{ updatedAt }}</p>
