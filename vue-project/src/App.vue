@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterLink, RouterView} from 'vue-router'
 </script>
 <template>
 
@@ -34,26 +34,28 @@ import { RouterLink, RouterView } from 'vue-router'
     <li></li>
   </ul>
 
-  <header>
-    <div class="wrapper">
-      <nav>
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/villes" class="nav-link">Villes</router-link>
-        <router-link to="/ville" class="nav-link">Ville</router-link>
-      </nav>
-    </div>
-  </header>
-
-
-  <main>
-    <div class="container">
-      <RouterView />
-      <div id="btn-div">
-      <button id="btn" @click="alertMe">Clic me please !</button>
+  <div class="mainAllWarp">
+    <header>
+      <div class="wrapper">
+        <nav>
+          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/villes" class="nav-link">Villes</router-link>
+          <router-link to="/ville" class="nav-link">Ville</router-link>
+          <router-link to="/route" class="nav-link">Map</router-link>
+        </nav>
       </div>
-      </div>
-  </main>
+    </header>
 
+
+    <main>
+      <div class="container_app">
+        <RouterView/>
+        <div id="btn-div">
+          <button id="btn" @click="alertMe">Clic me please !</button>
+        </div>
+      </div>
+    </main>
+  </div>
 
 </template>
 
@@ -61,7 +63,7 @@ import { RouterLink, RouterView } from 'vue-router'
 export default {
   // data(){},
   methods: {
-    alertMe(){
+    alertMe() {
       alert("Useless alert pop")
     }
   }
@@ -70,9 +72,29 @@ export default {
 
 <style scoped>
 
+nav a {
+  color: white;
+  font-size: 2rem;
+}
+
+.mainAllWarp {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .nav-link {
   margin: 20px;
+}
+
+#btn-div {
+  display: flex;
+  justify-content: center;
 }
 
 #btn {
@@ -102,6 +124,7 @@ export default {
   background: #0040C1;
   overflow: hidden;
 }
+
 .background li {
   position: absolute;
   top: 80vh;

@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import Discover from "@/views/Discover.vue";
 import citiesList from "@/views/CitiesList.vue";
 import City from "@/components/City.vue";
+import * as path from "path";
+import CitiesMap from "@/components/CitiesMap.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +32,9 @@ const router = createRouter({
     },
     {
       path: '/ville', name: 'ville', component: City
+    },
+    {
+      path: '/route', name: 'route', component: CitiesMap
     }
   ]
 })

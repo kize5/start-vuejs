@@ -59,6 +59,10 @@
   font-weight: normal;
 }
 
+* {
+  transition: 0.1s;
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
